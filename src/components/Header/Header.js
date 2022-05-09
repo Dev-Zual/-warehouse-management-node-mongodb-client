@@ -5,13 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <div>
-      <Navbar
-        sticky="top"
-        collapseOnSelect
-        expand="lg"
-        bg="dark"
-        variant="dark"
-      >
+      <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">GYM ACTIVE</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
