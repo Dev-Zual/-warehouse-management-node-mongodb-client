@@ -17,7 +17,7 @@ const Service = ({ service }) => {
         </div>
         <div className="card-footer">
           <Link to="/checkout">
-            <button className="btn my-color">Enroll Now</button>
+            <button className="my-color">Stock Update</button>
           </Link>
           <span className="cart-price fs-3">
             <strong>{price}</strong>

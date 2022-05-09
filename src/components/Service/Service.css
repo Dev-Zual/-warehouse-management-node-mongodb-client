@@ -1,4 +1,8 @@
 .my-color {
   background-color: #fb5b28;
   color: white;
+  border: none;
+  padding: 9px 10px;
+  border-radius: 5px;
+  margin-right: 40px;
 }
