@@ -1,23 +1,46 @@
 import React, { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 const SignIn = () => {
   const [validated, setValidated] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
+  // use signup with emai pass by hooks
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
 
+  // create user with ema & pass
+  const handleSignUpWithEmailPass = (e) => {
+    e.preventDefault();
+    createUserWithEmailAndPassword(email, password);
+  };
+  // error in create user with ema & pass
+  if (error) {
+    setErrorMsg('error', error.message);
+  }
+  if (error) {
+    return (
+      <div>
+        <p>Error: {error.message}</p>
+      </div>
+    );
+  }
+  if (loading) {
+    return (
+      <div>
+        <p>Initialising User...</p>
+      </div>
+    );
+  }
   // get input value
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
   const handlePass = (e) => {
     setPassword(e.target.value);
-  };
-
-  const handleSignUpWithEmailPass = (e) => {
-    e.preventDefault();
-    // createUserWithEmailAndPassword(email, password);
   };
 
   // bootstrap form validation
@@ -70,7 +93,7 @@ const SignIn = () => {
             </Form.Control.Feedback>
           </Form.Group>
         </Row>
-        {/* <p>{errorElemet}</p> */}
+        <p>{errorMsg}</p>
         <Button
           className="btn btn-dark"
           onClick={handleSignUpWithEmailPass}
