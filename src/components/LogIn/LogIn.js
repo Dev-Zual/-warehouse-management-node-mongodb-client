@@ -36,7 +36,7 @@ const LogIn = () => {
     setValidated(true);
   };
   return (
-    <div className="w-50 mx-auto">
+    <div className="w-50 mx-auto mt-4">
       <h2 className="text-center mt-5">Log In</h2>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="mb-3">
@@ -76,7 +76,7 @@ const LogIn = () => {
           </Form.Group>
         </Row>
 
-        <Button onClick={handleLogIn} type="submit">
+        <Button className="btn btn-dark" onClick={handleLogIn} type="submit">
           Log In
         </Button>
       </Form>

@@ -71,7 +71,11 @@ const SignIn = () => {
           </Form.Group>
         </Row>
         {/* <p>{errorElemet}</p> */}
-        <Button onClick={handleSignUpWithEmailPass} type="submit">
+        <Button
+          className="btn btn-dark"
+          onClick={handleSignUpWithEmailPass}
+          type="submit"
+        >
           Sign In
         </Button>
       </Form>
