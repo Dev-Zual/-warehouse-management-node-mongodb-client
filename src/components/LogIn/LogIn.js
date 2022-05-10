@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import googlImg from '../../images/google.png';
@@ -13,7 +16,7 @@ const LogIn = () => {
   // logn in with ema & pass
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-
+  const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
   //handle LogIn logn in with ema & pass
   const handleLogIn = (e) => {
     e.preventDefault();
@@ -28,7 +31,7 @@ const LogIn = () => {
   };
 
   const createUserWithGoogle = () => {
-    // signInWithGoogle();
+    signInWithGoogle();
   };
 
   // bootstrap form validation

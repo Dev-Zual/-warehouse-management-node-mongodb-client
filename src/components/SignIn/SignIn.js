@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import {
+  useCreateUserWithEmailAndPassword,
+  useSendEmailVerification,
+} from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 const SignIn = () => {
   const [validated, setValidated] = useState(false);
@@ -17,10 +20,11 @@ const SignIn = () => {
     e.preventDefault();
     createUserWithEmailAndPassword(email, password);
   };
+
   // error in create user with ema & pass
-  if (error) {
-    setErrorMsg('error', error.message);
-  }
+  // if (error || error1) {
+  //   setErrorMsg('error', error.message);
+  // }
   if (error) {
     return (
       <div>
@@ -93,6 +97,7 @@ const SignIn = () => {
             </Form.Control.Feedback>
           </Form.Group>
         </Row>
+
         <p>{errorMsg}</p>
         <Button
           className="btn btn-dark"
