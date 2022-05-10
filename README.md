@@ -1,8 +1,18 @@
-# Getting Started with Create React App
+# Warehouse Management Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Client side repo link](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Dev-Zual).
+Client side repo link: [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Dev-Zual]
 
-## Available Scripts
+[Server side repo link](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Dev-Zual).
+Server side repo link: [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Dev-Zual]
+
+## Technologoy I used
+
+- React.js
+- bootstrap
+- express
+- nod.js
+- mongodb
 
 In the project directory, you can run:
 

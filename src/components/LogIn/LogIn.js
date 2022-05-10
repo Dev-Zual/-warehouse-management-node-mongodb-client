@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import googlImg from '../../images/google.png';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import Spinner from '../Spinner/Spinner';
 const LogIn = () => {
   const [validated, setValidated] = useState(false);
   const [email, setEmail] = useState('');
@@ -23,6 +24,9 @@ const LogIn = () => {
     e.preventDefault();
     signInWithEmailAndPassword(email, password);
   };
+  // if (loading || loading1) {
+  //   return <Spinner></Spinner>;
+  // }
   // get input value
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -56,6 +60,7 @@ const LogIn = () => {
   return (
     <div className="w-50 mx-auto mt-4">
       <h2 className="text-center mt-5">Log In</h2>
+
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group

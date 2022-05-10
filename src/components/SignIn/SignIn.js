@@ -6,6 +6,7 @@ import {
   useSendEmailVerification,
 } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Spinner from '../Spinner/Spinner';
 const SignIn = () => {
   const [validated, setValidated] = useState(false);
   const [email, setEmail] = useState('');
@@ -32,13 +33,9 @@ const SignIn = () => {
       </div>
     );
   }
-  if (loading) {
-    return (
-      <div>
-        <p>Initialising User...</p>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return <Spinner></Spinner>;
+  // }
   // get input value
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -60,6 +57,7 @@ const SignIn = () => {
   return (
     <div className="w-50 mx-auto">
       <h2 className="text-center mt-5">Sign Up</h2>
+
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group
