@@ -1,6 +1,6 @@
 # Warehouse Management Store
 
-## [Live Website link][https://warehouse-management-fe26d.web.app/]
+## [Live Website link](https://warehouse-management-fe26d.web.app/)
 
 ### Live Website link: (https://warehouse-management-fe26d.web.app/)
 
