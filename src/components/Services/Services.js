@@ -9,7 +9,7 @@ const Services = () => {
   return (
     <div className="container">
       <h1 className="text-center mt-5 service-text mb-4">Equipment Fitness</h1>
-      <div className="row row-cols-1 row-cols-md-3 g-4">
+      <div className="row row-cols-1 row-cols-md-3 g-4 mt-5">
         {sliceService.map((service) => (
           <Service key={service._id} service={service}></Service>
         ))}

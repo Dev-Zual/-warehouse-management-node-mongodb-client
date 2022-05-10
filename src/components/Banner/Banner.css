@@ -1,5 +1,10 @@
 .banner-img-text h2 {
   margin-top: 10px;
   font-size: 40px;
-  margin-left: -40px;
+  margin-left: 20px;
+}
+.banner-img-text-right h2 {
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 10px;
 }

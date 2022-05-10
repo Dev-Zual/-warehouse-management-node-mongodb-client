@@ -50,7 +50,7 @@ const Banner = () => {
               src="https://cdn.shopify.com/s/files/1/0265/4945/2871/files/banner_2.4.jpg?v=1575690981"
               alt=""
             />
-            <div className="position-absolute text-white banner-img-text">
+            <div className="position-absolute text-white banner-img-text-right">
               <h2>Deadlift</h2>
             </div>
           </div>
