@@ -16,7 +16,7 @@ const Service = ({ service }) => {
           <p className="card-text">{description}</p>
         </div>
         <div className="card-footer">
-          <Link to="/checkout">
+          <Link to="/inventory">
             <button className="my-color">Stock Update</button>
           </Link>
           <span className="cart-price fs-3">

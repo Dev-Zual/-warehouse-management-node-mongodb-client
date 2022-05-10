@@ -7,7 +7,7 @@ import {
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import googlImg from '../../images/google.png';
-
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 const LogIn = () => {
   const [validated, setValidated] = useState(false);
   const [email, setEmail] = useState('');
@@ -17,6 +17,7 @@ const LogIn = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
+
   //handle LogIn logn in with ema & pass
   const handleLogIn = (e) => {
     e.preventDefault();
@@ -29,9 +30,17 @@ const LogIn = () => {
   const handlePass = (e) => {
     setPassword(e.target.value);
   };
-
+  // google provider
+  const provider = new GoogleAuthProvider();
   const createUserWithGoogle = () => {
-    signInWithGoogle();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        const email = error.email;
+      });
   };
 
   // bootstrap form validation
