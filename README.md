@@ -1,10 +1,12 @@
 # Warehouse Management Store
 
 [Client side repo link](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Dev-Zual).
-Client side repo link: [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Dev-Zual]
+
+## Client side repo link: [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Dev-Zual]
 
 [Server side repo link](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Dev-Zual).
-Server side repo link: [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Dev-Zual]
+
+## Server side repo link: [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Dev-Zual]
 
 ## Technologoy I used
 
